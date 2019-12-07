@@ -1,0 +1,24 @@
+EFS Overview
+------------
+- Elastic File System
+- Managed network file system (NFS) that can be mounted on many EC2 instances-
+- Works with instances in multiple AZs
+- Highly available, scalable, and expensive
+    - About 3x more that GP2
+- Pay per use, not provisioned cost
+    - Can therefore work out cheaper than GP2 if managed with care
+- EFS fronted by a security group, which can be configured to allow access
+  to EC2 instances.
+- Use cases:
+    - content management
+    - web serving
+    - data sharing
+    - wordpress
+- Uses NFSv4.1 protocal
+- Compatible with Lunix AMIs, but not windows
+- Performance mode
+    - General purpose (default)
+    - Max I/O - used when thousands of EC2 using the EFS
+- EFS finle sync: sync on prem file system to EFS
+- Backup EFS to EFS (incremental, can choose frequency)
+- Can encrypt at rest with KMS
