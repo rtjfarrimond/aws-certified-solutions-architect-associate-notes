@@ -1,0 +1,14 @@
+EBS vs Instance Store
+---------------------
+- Some instances do not come with root EBS volumes
+    - Instead they come with 'instance store' (ephemeral storage)
+- Instance store is physically attached to the machine
+- EBS is a network drive
+- Instance store pros:
+    - Better I/O because there is no network
+    - Good for buffer / cache / scrath data / temporary content
+    - Data survives reboots
+- Instance store cons:
+    - On stop or termination the instance store is lost
+    - Cannot resize on the fly like we can EBS volumes
+    - Backups must be operated by the user
