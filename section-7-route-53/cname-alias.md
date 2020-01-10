@@ -1,0 +1,14 @@
+CNAME vs ALIAS
+--------------
+- *Popular exam topic*
+- AWS Resources expose an AWS URL:
+    - E.g. `lb1-1234.us-west-1-elb-amazonaws.com`
+    - We want `myapp.mydomain.com` to direct here
+- CNAME
+    - Points a URL to any other URL
+    - *ONLY FOR NON-ROOT DOMAIN!*
+- ALIAS
+    - Points a URL to an AWS resource only
+    - Works for root and non-root domain
+    - Free of charge
+    - Supports native healtchecks

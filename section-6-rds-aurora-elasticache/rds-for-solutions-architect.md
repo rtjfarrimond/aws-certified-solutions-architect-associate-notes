@@ -1,0 +1,12 @@
+RDS for the Solutions Architect
+-------------------------------
+- Read replicas can only be used for SELECT statements
+- Supports Transparent Data Encryption (TDE)
+    - Oracle and SQLserver only
+    - Extra leyer on top of KMS - may affect performance
+- IAM can be used instead of username and pass
+    - PostgreSQL and MySQL only
+    - Lifespan of an auth token is 15 min only
+    - SSL must be used
+    - Easy to use EC2 instance roles to connect to the RDS database
+        - Enhanced security since username and pass do not need to exist

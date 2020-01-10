@@ -1,0 +1,11 @@
+Versioning
+----------
+- Versioning has to be enabled at the bucket level
+- Overwriting a file increments its version
+- Bucket keeps all versions
+- Best practice to enable
+    - Protect against accidental deletes
+    - Easily rollback to previous version
+- Any file that is not versioned prior to enabling versioning will have version 'null'
+- Deleting a versioned file will not remove it from the bucket, it will just add a 'delete marker' against the latest version
+    - This can be restored to remove the delete marker
